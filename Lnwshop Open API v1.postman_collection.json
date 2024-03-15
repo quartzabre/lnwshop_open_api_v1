@@ -262,7 +262,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://open.lnwshop.com/{your-shop-id/api/v1/order/set_delivery",
+					"raw": "https://open.lnwshop.com/{your-shop-id}/api/v1/order/set_delivery",
 					"protocol": "https",
 					"host": [
 						"open",
@@ -270,7 +270,7 @@
 						"com"
 					],
 					"path": [
-						"{your-shop-id",
+						"{your-shop-id}",
 						"api",
 						"v1",
 						"order",
