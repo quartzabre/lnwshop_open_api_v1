@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "e50656e9-535f-4a87-9156-961f2eff911e",
+		"name": "Lnwshop Open API v1",
+		"description": "In the URL, replace shop_id of your own. And in HTTP Headers, replace x-api-key of your own.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1488675"
+	},
+	"item": [
+		{
+			"name": "Product : Update Price (update full price and remove any discount)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "YOUR-X-API-KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_sku\": \"SKU-00009\",\r\n    \"price\": 99999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.lnwshop.com/{your-shop-id}/api/v1/product/update_price",
+					"protocol": "https",
+					"host": [
+						"open",
+						"lnwshop",
+						"com"
+					],
+					"path": [
+						"{your-shop-id}",
+						"api",
+						"v1",
+						"product",
+						"update_price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product : Update Price (both full price and discounted price)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "YOUR-X-API-KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_sku\": \"SKU-00009\",\r\n    \"price\": 99998.88,\r\n    \"full_price\": 99999.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.lnwshop.com/{your-shop-id}/api/v1/product/update_price",
+					"protocol": "https",
+					"host": [
+						"open",
+						"lnwshop",
+						"com"
+					],
+					"path": [
+						"{your-shop-id}",
+						"api",
+						"v1",
+						"product",
+						"update_price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product : Update Price Batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "YOUR-X-API-KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"product_sku\": \"SKU-00007\",\r\n            \"price\": 99999\r\n        },\r\n        {\r\n            \"product_sku\": \"SKU-00008\",\r\n            \"price\": 99998,\r\n            \"full_price\": 99998.99\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.lnwshop.com/{your-shop-id}/api/v1/product/update_price_batch",
+					"protocol": "https",
+					"host": [
+						"open",
+						"lnwshop",
+						"com"
+					],
+					"path": [
+						"{your-shop-id}",
+						"api",
+						"v1",
+						"product",
+						"update_price_batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product : Update Stock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "YOUR-X-API-KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_sku\": \"SKU-00009\",\r\n    \"stock\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.lnwshop.com/{your-shop-id}/api/v1/product/update_stock",
+					"protocol": "https",
+					"host": [
+						"open",
+						"lnwshop",
+						"com"
+					],
+					"path": [
+						"{your-shop-id}",
+						"api",
+						"v1",
+						"product",
+						"update_stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product : Update Stock Batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "YOUR-API-KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"product_sku\": \"SKU-00007\",\r\n            \"stock\": 10\r\n        },\r\n        {\r\n            \"product_sku\": \"SKU-00008\",\r\n            \"price\": 99998,\r\n            \"stock\": 11\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.lnwshop.com/{your-shop-id}/api/v1/product/update_stock_batch",
+					"protocol": "https",
+					"host": [
+						"open",
+						"lnwshop",
+						"com"
+					],
+					"path": [
+						"{your-shop-id}",
+						"api",
+						"v1",
+						"product",
+						"update_stock_batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order : List (all params are optional)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "YOUR-X-API-KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_create_time_from\": \"2000-01-01 00:00:00\",\r\n    \"order_create_time_to\": \"2030-12-31 23:59:59\",\r\n    \"payment_approve_time_from\": \"2000-01-01 00:00:00\",\r\n    \"payment_approve_time_to\": \"2030-12-31 23:59:59\",\r\n    \"pagination_limit\": 100,\r\n    \"offset\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.lnwshop.com/{your-shop-id}/api/v1/order/list",
+					"protocol": "https",
+					"host": [
+						"open",
+						"lnwshop",
+						"com"
+					],
+					"path": [
+						"{your-shop-id}",
+						"api",
+						"v1",
+						"order",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order : Set Delivery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "YOUR-X-API-KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\": 1,\r\n    \"shipping_provider\": \"thailandpost\",\r\n    \"track_code\": \"testtrackcode1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.lnwshop.com/{your-shop-id/api/v1/order/set_delivery",
+					"protocol": "https",
+					"host": [
+						"open",
+						"lnwshop",
+						"com"
+					],
+					"path": [
+						"{your-shop-id",
+						"api",
+						"v1",
+						"order",
+						"set_delivery"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
